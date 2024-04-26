@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header class="text-gray-600 body-font shadow w-full fixed top-0 bg-white">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <span class="ml-3 text-xl">Chatbot</span>
+            </a>
+        </div>
+    </header>
+    <div class="flex items-center justify-center h-screen">
+        <div class="bg-white w-full max-w-lg shadow-lg rounded-lg p-8 m-4">
+            <div id="chat" class="overflow-y-auto h-96"></div>
+            <div class="mt-4">
+                <input type="text" id="userInput" class="w-full p-2 border border-gray-300 rounded" placeholder="Type your message...">
+                <button id="sendButton" class="w-full mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer class="text-gray-600 body-font shadow w-full fixed bottom-0 bg-white">
+        <div class="container mx-auto flex items-center sm:flex-row flex-col">
+            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2024 Chatbot —
+                <a href="https://twitter.com/" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@cedrick_chu</a>
+            </p>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
